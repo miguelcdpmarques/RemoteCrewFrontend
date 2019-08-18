@@ -1,0 +1,303 @@
+.homepage-header {
+    background-image: linear-gradient(rgba($color-primary-dark, 0.8),rgba($color-primary-dark, 0.8)), url(~assets/images/homepage/cover/success.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 90vh;
+    background-attachment: fixed;
+    position: relative;
+
+    @include respond(tab-land) {
+        background-image: linear-gradient(rgba($color-primary-dark, 0.8),rgba($color-primary-dark, 0.8)), url(~assets/images/homepage/cover/success-md.jpg);
+        background-attachment: scroll;
+    }
+    @include respond(tab-port) {
+        background-image: linear-gradient(rgba($color-primary-dark, 0.8),rgba($color-primary-dark, 0.8)), url(~assets/images/homepage/cover/cover-sm-alt.jpg);
+    }
+    @include respond(phone) {
+        height: 80vh;
+    }
+}
+
+.section-features {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    @include respond(phone) {
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.main-heading {
+    &-group {
+        position: absolute;
+        left: 6rem;
+        width: 75%;
+        @include align-absolute-center;
+        top: 60%;
+        @include respond(tab-land) {
+            position: relative;
+            text-align: center;
+            width: 90%;
+        }
+    }
+    &-companies {
+        top: 60%;
+        width: 60%;
+    }
+
+    &-list {
+        list-style: none;
+        font-size: 1rem;
+        color: $color-white;
+        text-align: left;
+        display: table;
+        margin: auto;
+        &-bullets{
+            margin: 1rem;
+            &:before {
+                content: "\2605";   
+            }    
+            @include respond(phone) {
+                font-size: .75rem;
+                margin: .75rem 0;
+            }
+            @media (max-width: 24em) { 
+                font-size: .5rem; 
+            }
+            
+        }
+    }
+
+    &-buttons {
+        margin: auto;
+        margin-top: 3rem;
+        text-align: center;
+        @include respond(phone) {
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+.section-como-funciona {
+    overflow: auto;
+}
+
+.feature-column {
+    @include respond(phone) {
+        padding: 0 2rem;
+    }
+}
+.feature-group {
+    display: flex;
+    align-items: flex-start;
+    @include respond(phone) {
+        border: 1px solid $color-dark-grey;
+        padding: 1rem .5rem;
+        margin-bottom: 2rem;
+    }
+}
+.feature-icon {
+    height: 40px;
+}
+
+.section-disciplines {
+    background-color: $color-light-grey;
+    padding-top: .1rem;
+    height: 100%;
+    padding-bottom: 8rem;
+    @include respond(phone) {
+        padding-bottom: 4rem;
+    }
+}
+
+.multiline-heading {
+    width: 60%;
+    margin: 0 auto;
+    @include respond(tab-port) {
+        width: 80%;
+    }
+    @include respond(phone) {
+        width: 95%;
+    }
+}
+
+.discipline-column {
+    @include respond(phone) {
+        text-align: center;
+    }
+}
+
+.freelancer {
+    &-personal-info {
+        @include align-top;
+        &-pic {
+            border-radius: 5rem;
+            height: 5rem;
+            margin: 0 1rem 0.5rem 0;
+            border: 2px solid $color-light-grey-blue;
+        }   
+        &-details {    
+        }
+    }
+    &-name {
+        font-size: 1rem;
+        margin: 0.5rem 0 1rem 0;
+    }
+
+    &-location {
+        @include align-center;
+        &-icon {
+            height: 1.2rem;
+        }
+        &-text {
+            font-size: 1rem;
+            margin: 0 0 0 .5rem;
+            @include respond(phone) {
+                font-size: .7rem;
+            }
+        }
+    }
+
+    &-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $color-black;
+    }
+    &-experience {
+        font-size: .9rem;
+        color: grey;
+        font-weight: normal;
+        margin: .1rem 0 .5rem 0;
+    }
+
+    &-skillset {
+        &-tag {
+            margin: .5rem .25rem 0 0;
+            display: inline-block;
+            transform: skew(20deg);
+            background: darkorange;
+            color: black;
+            text-align: center;
+            &-text {
+                transform: skew(-20deg); 
+                margin-bottom: 0;
+                padding: .25rem;
+                font-weight: 700; 
+                font-size: .8rem;
+            }
+        }
+    }
+    &-price {
+        text-align: right;
+        margin-top: .75rem;
+        &-text {
+            margin: 0;
+            font-size: 1rem;
+            letter-spacing: -1px;
+        }
+        &-value {
+            color: $color-primary-dark;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+    }
+
+}
+
+.freelancer-join_us {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    @include respond(tab-port) {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.button-saber-mais {
+    text-align: center;
+}
+
+.candidatura {
+    &-list {
+        list-style-type: none;
+    }
+    &-fases {
+        display: flex;
+        margin: 1rem 0;
+    }
+    &-process {
+        height: 80%;
+        float: right;
+    }
+    &-square {
+        margin: 1rem auto;
+        background-color: $color-primary-dark;
+        height: 3rem;
+        width: 12rem;
+        color: white;
+        &-text {
+            font-size: 1rem;
+            text-align: center;
+            top: 50%;
+            padding-top: 1rem;
+        }
+    }
+}
+
+.jumpstart {
+    &-square {
+        height: 20rem;
+        width: 25rem;
+        background-color: grey;
+        margin: 1rem auto;
+        text-align: center;
+        border: 3px solid $color-primary-alt;
+        @include respond(tab-land) {
+            height: 15rem;
+            width: 80%;
+        }
+
+        &-teams {
+            background-image: linear-gradient(rgba($color-primary-alt, 0.8),rgba($color-primary-alt, 0.8)), url(~assets/images/homepage/features/team.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &-individuals {
+            background-image: linear-gradient(rgba($color-primary-alt, 0.8),rgba($color-primary-alt, 0.8)), url(~assets/images/homepage/features/individual.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    &-title {
+        font-size: 1.2rem;
+        padding-top: 2rem;
+        color: $color-secondary-light;
+    }
+}
+
+.section{
+    &-text-element {
+        padding-top: 6rem;
+        @include respond(phone) {
+            padding-top: 4rem;
+        }
+    }
+    
+    &-jumpstart {
+        margin-bottom: 6rem;
+    }
+
+    &-comecar {
+        padding-top: .1rem;
+        height: 100%;
+        overflow: auto;
+        &-secondary {
+            background-color: transparent; 
+        }
+    }
+}
+
+

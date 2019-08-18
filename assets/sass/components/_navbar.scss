@@ -1,0 +1,116 @@
+.navbar {
+    &-remotecrew {
+        color: $color-secondary-dark !important;
+        font-size: 1.6rem; 
+        margin-top: 1.4rem;
+        margin-left: 3rem;
+        margin-right: 1.5rem;
+        font-weight: 500;
+        border: 2px solid rgba(0,0,0,0);
+
+        @include respond(tab-land) {
+            font-size: 1.5rem; 
+            margin-top: 1.4rem;
+            margin-left: 1.3rem;
+        }
+
+        @include respond(tab-port) {
+            margin-top: .7rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+
+        &:hover {
+            color: $color-secondary-light !important;
+            transform: translateY(0);
+        }  
+    }
+
+    &-item {
+        color: $color-white !important;
+        font-size: 1.3rem;
+        margin-top: $navbar-margin-top;
+        margin-right: 1rem;
+        border-bottom: 2px solid rgba(0,0,0,0);
+
+        @include respond(tab-port) {
+            font-size: 1.1rem;
+            margin-top: $navbar-margin-top-small;
+            margin-left: .4rem;
+            margin-right: 0;
+        }
+        @include respond(phone) {
+            font-size: .9rem; 
+        }
+
+        &:hover {
+            color: $color-white !important;
+            border-bottom: solid 2px $color-secondary-dark;
+            transform: translateY(-.2rem);
+        }
+        &-active {
+            color: $color-secondary-dark;
+        }
+    }
+    &-span {
+        font-size: 2rem;
+        color: $color-white;
+        margin-top: calc(#{$navbar-margin-top} - .1rem);
+        margin-right: 1rem;
+    }
+    &-toggle-element {
+        margin-top: 1.5rem;
+    }
+    &-dropdown {
+        border: 1px solid $color-white;
+        padding: .4rem .75rem .2rem;
+
+        &:hover {
+            transform: translateY(0);   
+            border-bottom: 1px solid $color-white;
+        }
+        &-img {
+            height: 2rem;
+            width: 2rem;
+            border-radius: 2rem;
+        }
+        &-div {
+            background-color: $color-secondary-light;
+            color: $color-primary-dark;
+        }
+    }
+}
+
+.shrink {
+    background-color: rgba($color-primary-dark, 0.9);
+    height: 5rem;
+    padding-top: .3rem;
+    margin-top: -1rem;
+}
+
+.navbar-collapse.collapse.show {
+    background-color: $color-black;
+    position: absolute;
+    top: 5rem;
+    right: 0rem;
+    padding: 1rem;
+    animation-name: moveInTop;
+    animation-duration: .5s;
+    & > ul > li > a {
+        margin-top: .5rem;
+        margin-right: 1rem;
+        font-size: 1rem;
+    }
+}
+
+button.navbar-toggler.collapsed {
+    margin-top: 1.5rem;
+}
+
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+

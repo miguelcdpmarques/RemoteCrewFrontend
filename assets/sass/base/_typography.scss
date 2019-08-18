@@ -1,0 +1,477 @@
+// ********************************* HOME ****************************** \\
+
+.main-heading {
+    color: $color-white;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+
+    @include respond(bigdesktop) {
+        font-size: 3rem;
+    }
+    @include respond(tab-port) {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    @include respond(phone) {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    @media (max-width: 24em) { 
+        font-size: 1.25rem; 
+    }
+    &-code {
+        color: $color-secondary-dark;
+    }
+}
+
+.heading-secondary {
+    text-align: center;
+    margin: 5rem 0;
+    font-size: 2.5rem;
+
+    @include respond(tab-port) {
+        font-size: 2rem; 
+    }
+
+    @include respond(phone) {
+        font-size: 1.4rem;
+        margin: 4rem 0;
+        font-weight: 600;
+    }
+}
+
+.heading-tertiary {
+    color: $color-primary-dark;
+    font-size: 2rem;
+    @include respond(phone) {
+        font-size: 1.5rem;
+    }
+}
+
+.paragraph {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 2rem 0;
+    text-align: justify;
+    @include respond(phone) {
+        font-size: 1rem;
+    }
+
+    &-missao {
+        line-height: 1.5;
+        font-size: 2rem;
+        margin: 6rem 0;
+        font-weight: 700; 
+        @include respond(phone) {
+            font-size: 1.5rem;
+            margin: 4rem 0;
+        }
+    }
+}
+
+.feature-heading {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    @include respond(phone) {
+        font-size: 1.3rem;
+    }
+}
+
+.feature-paragraph {
+    margin: 1rem;
+    font-size: 1.25rem;
+    letter-spacing: -1px;
+    @include respond(phone) {
+        font-size: 1.1rem;
+    }
+}
+
+.discipline-heading {
+    color: $color-black;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    @include respond(phone) {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+.freelancer-join_us {
+    &-heading {
+        @include respond(tab-port) {
+            font-size: 1.25rem
+        }
+    }
+
+    &-text {
+    color: $color-primary-dark;
+    text-decoration: underline;
+        &:hover {
+            color: $color-secondary-dark;
+            text-decoration: underline;
+        }
+    }
+}
+
+.comecar-heading {
+    color: $color-primary-dark;
+    margin-top: 6rem;
+    font-size: 2.5rem;
+    @include respond(tab-port) {
+        margin-top: 5rem;
+    }
+    @include respond(phone) {
+        margin-top: 4rem;
+        font-size: 1.75rem;
+    } 
+}
+
+.comecar-text {
+    color: $color-black;
+    font-size: 1.75rem;
+    float: left;
+    margin-bottom: 6rem;
+    @include respond(tab-port) {
+        margin-bottom: 3rem;
+        font-size: 1.25rem;
+    }
+}
+
+
+// ********************************* COMO FUNCIONA ****************************** \\
+
+.como-funciona {
+    &__main-heading {
+        color: white;
+        font-weight: 300;
+        margin-bottom: 3rem;
+        @include respond(phone) {
+            font-size: 1.75rem;
+        }
+    }
+
+    &__main-description {
+        color: white;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        @include respond(phone) {
+            font-size: 1.1rem;
+        }
+    }
+
+    &__section-description {
+        line-height: 1.5;
+        color: $color-black;
+        text-align: left;
+        margin: 5rem 0;
+        font-weight: 300;
+        font-size: 1.5rem;
+        text-align: justify;
+        @include respond(phone) {
+            font-size: 1.1rem;
+            margin: 3rem 0;
+        }
+    }
+
+    &__extended-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #000;
+        margin-left:1rem;
+    }
+        
+    &__extended-bullet-items {
+        list-style: square;
+        margin: 1.5rem 3rem 1.5rem 5rem;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        color: $color-black;
+        @include respond(phone) {
+            margin: 1.5rem 1rem;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.taxa_servico {
+    &-title {
+        color: $color-black;
+        font-weight: 700;
+    }
+    &-text {
+        font-size: 1.3rem;
+        color: $color-black;
+        margin-top: 2rem;
+        text-align: justify;
+    }
+}
+
+// ********************************* DEVELOPERS ****************************** \\
+
+.developers-heading {
+    font-family: 'Courier New', Courier, monospace;
+    color: $color-white;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+
+    @include respond(bigdesktop) {
+        font-size: 3rem;
+    }
+    @include respond(tab-port) {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    @include respond(phone) {
+        font-size: 1.1rem;
+    }
+    &-code {
+        color: $color-secondary-dark;
+    }
+}
+
+.heading-empresa {
+    color: $color-secondary-light;
+    font-size: 1rem;
+    @include respond(phone) {
+        font-size: .75rem;
+    }
+    &-link {
+        color:$color-secondary-dark;
+        text-decoration: underline;
+        &:hover {
+            color: $color-secondary-light; 
+        }
+    }
+}
+
+.bullet-items {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    @include respond(phone) {
+        font-size: 1rem;
+        margin: 1rem 0 1rem .5rem;
+    }
+}
+
+.esperado-header {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.candidatura {
+    &-heading {
+        font-size: 1.5rem;
+        @include respond(tab-port) {
+            font-size: 1.2rem;
+        }
+    }
+    &-smallerheading{
+        font-size: 1.1rem;
+    }
+    &-title {
+        font-size: 1.5rem;
+        @include respond(tab-port) {
+            font-size: 1.2rem;
+        }
+    }
+    &-paragraph {
+        font-size: 1.2rem;
+        @include respond(tab-port) {
+            font-size: 1rem;
+        }
+    }
+    &-status-pending {
+        font-size: .8rem;
+        color: $color-primary-dark;
+        font-weight: 700;
+    }
+    &-status-tbd {
+        font-size: .8rem;
+        color: $color-secondary-dark;
+        font-weight: 700;
+    }
+}
+
+.termos-paragraph {
+    margin-left: .5rem;
+    font-size: .9rem;
+    @include respond(phone) {
+        font-size: .7rem;
+    }
+}
+// ********************************* CLIENT SIGNUP ****************************** \\
+
+
+.signup {
+    &__client-heading {
+        padding-top: 5rem;
+        margin-bottom: 0;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    &-question {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        @include respond(phone) {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+    &-box-answer {
+        font-size: 1.1rem;
+        line-height: 1.2;
+    }
+    &-box-header-text {
+        margin: 0;
+    }
+    &-paragraph {
+        line-height: 1.5;
+        font-size: 1.3rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        @include respond(phone) {
+            font-size: 1rem;
+        }
+    }
+
+    &-box-contact-details{
+        &-header {
+        float: left;
+        margin-right: 1rem;
+        }
+        &-data {
+            font-size: 1.1rem;
+            color: $color-primary-dark;
+            font-weight: 500;
+        }
+        &-edit {
+            float: right;
+            font-size: 1rem;
+            color: $color-dark-grey;
+            margin-top: -1rem;
+        }
+    }
+    &_formlabel {
+        font-size: 1.1rem;
+        font-weight: 700;
+        display: inline;
+        letter-spacing: -1px;
+        @include respond(phone) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.error-title {
+    margin-top: 10rem;
+}
+
+.login-text {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    @include respond(phone) {
+        margin-bottom: 2rem;
+    }
+}
+
+.form-file-text {
+    font-size: 1rem;
+}
+
+.support-text {
+    font-size: .8rem;
+    margin-top: .5rem;
+}
+.support-email {
+    &-text {
+        font-size: .6rem;
+        margin: 0 0 .5rem 0;
+    }
+    &-input {
+        margin-top: 1.7rem;
+        @include respond(phone) {
+            margin-top: 0;
+        }
+    }
+}
+    
+
+.obrigatorio {
+    &-text {
+        font-size: .8rem;
+        margin-top: .5rem;
+        color: red;
+        font-weight: 400;
+    }
+    &-symbol {
+        color: red;
+        font-size: 1.2rem;
+    }
+}
+
+// ********************************* PROFILE ****************************** \\
+
+.profile {
+    &-header {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+}
+
+// ********************************* LOGIN ****************************** \\
+
+.login {
+    &-support-text {
+        text-align: left;
+        margin: .5rem 0;
+        font-size: .9rem;
+    }
+    &-link {
+        color: $color-secondary-dark;
+        font-weight: 500;
+    }
+}
+.registo {
+    &-checkbox {
+        float: left;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+    &-termos {
+        margin-top: 1rem;
+        margin-bottom: 0;
+        margin-left: 1rem;
+        font-size: .8rem;
+        text-align: left;
+    }
+}
+
+// ********************************* LEGAL ****************************** \\
+
+.legal {
+    &-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 4rem;   
+        font-weight: 700; 
+    }
+    &-subtitle {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    &-description {
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+    
+}

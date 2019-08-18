@@ -1,0 +1,26 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/layout";
+@import "base/utilities";
+@import "base/typography";
+
+@import "components/box";
+@import "components/button";
+@import "components/cardgroup";
+@import "components/footer";
+@import "components/navbar";
+@import "components/timeline";
+
+@import "pages/home";
+@import "pages/como-funciona";
+@import "pages/developers";
+@import "pages/criar-perfil";
+@import "pages/registar";
+@import "pages/contratar";
+@import "pages/error";
+@import "pages/dashboard";
+@import "pages/perfil";
+@import "pages/legal";

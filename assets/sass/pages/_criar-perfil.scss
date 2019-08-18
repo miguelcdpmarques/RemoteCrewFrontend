@@ -1,0 +1,83 @@
+div.bootstrap-tagsinput span.badge {
+    margin-right: .3rem;
+    padding: .4rem;
+    background-color: $color-primary-dark;
+}
+
+div.bootstrap-tagsinput input {
+    font-size: 1rem;
+}
+
+.website-link {
+    display: inline-block;
+    width: 80%;
+    &-remove {
+        font-weight: 700;
+        color: $color-dark-grey;
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        &:hover {
+            color: $color-black;
+        }
+    }
+}
+
+.price {
+    &-element {
+        display: block;
+        @include clearfix;
+    }
+    &-text {
+        float: left;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    &-input {
+        float: right;
+        width: 6rem;
+    }
+}
+
+.candidatura {
+    text-align: center;
+    @include respond(phone) {
+        border: 1px solid $color-dark-grey;
+        padding: 1rem;
+        width: 80% !important;
+        margin: 1rem auto;
+    }
+    &-icon {
+        height: 2.5rem;
+        margin: .5rem .75rem 0 0;
+    }
+    &-content {
+        margin-top: 2rem;
+    }
+}
+
+.experience {
+    &-table {
+        font-size: 1rem;
+        width: auto;
+        & td { 
+            vertical-align: middle;
+        }
+        @include respond(phone) {
+            width: 100%;
+            border: 1px solid $color-black;
+            margin-bottom: 2rem !important;
+            margin-top: 1rem;
+            border-collapse: unset;
+        }
+        &-row {
+            min-width: 8rem;
+            padding: .5rem !important;
+            vertical-align: middle !important;
+            @include respond(tab-port) {
+                min-width: 5rem;
+            }
+        }
+        
+    }
+}

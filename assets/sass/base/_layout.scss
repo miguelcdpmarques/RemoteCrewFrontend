@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: 300;
+    font-size: 62.5%;
+    line-height: 1.2;
+    overflow-x: hidden;
+    
+    @include respond(tab-land) {
+        font-size: 56.25%;     // 1 rem = 8px, 9/16 = 56.25%
+    }
+    @include respond(tab-port) {
+        font-size: 50%;        // 1 rem = 8px, 8/16 = 50%
+    }
+    @include respond(bigdesktop) {
+        font-size: 70%;        // 1 rem = 8px, 8/16 = 50%
+    }
+    
+    input[type='text'] {
+        font-size: .9rem;
+
+        @include respond(phone) {
+            font-size: .7rem;        // 1 rem = 8px, 8/16 = 50%
+        }
+    }
+}
+
+.courier-font {
+    font-family: 'Courier New', Courier, sans-serif;
+}
+
+.row .col-sm {
+    @include respond(tab-port) {
+        width: 100%;
+    }
+}

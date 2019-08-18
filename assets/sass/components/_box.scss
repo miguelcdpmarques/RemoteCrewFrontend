@@ -1,0 +1,739 @@
+.discipline-box {
+    background-color: $color-white;
+    display: inline-block;
+    text-align: center;
+    height: 11rem;
+    width: 18rem;
+    padding: 2rem 4rem;
+    border: 2px solid $color-light-grey-blue;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    margin: .5rem;
+    @media (max-width: 62.5em) { 
+        width: 14rem; 
+    };
+    @include respond(tab-port) {
+        height: 10rem;
+        width: 14rem;
+        padding: 2rem 1rem;
+    }
+    @include respond(phone) {
+        width: 80%;
+        padding: 1rem 1rem;
+        height: 7rem;
+    }
+
+
+    &:hover {
+        transform: translateY(-.2rem);
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+    }
+
+    &-link:hover {
+        text-decoration: none;
+    }
+    &-icon {
+        @include respond(phone) {
+            height: 2rem;
+        }
+    }
+}
+
+.freelancer {
+    &-box {
+        background-color: #e9f2f533;
+        border: 1px solid #d9eef5;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        margin-bottom: 2rem;
+
+        @include respond(phone) {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+            height: auto;
+        }
+        &-md-center {
+            @include respond(tab-land) {
+                margin: 0 auto; 
+            }
+        }
+    }
+    &-notice {
+        margin-bottom: 0.8rem;
+        margin-top: -0.2rem;
+        color: $color-primary-dark;
+        text-align: center;
+        font-size: .5rem;
+    }
+    &-previous-clients {
+        &-text {
+            font-size: .8rem;
+            text-align: center;
+            color: $color-dark-grey;
+            margin: .5rem 0;
+        }
+        &-group {
+            text-align: center;
+        }
+        &-img {
+            height: 1.8rem;
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+            margin: 0 1rem;
+            width: 32.5%;
+        }
+    }
+}
+
+.signup-box {
+    position: relative;
+    margin-bottom: 6rem;
+
+    @include respond(phone) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    &-client {
+        margin: 0 auto;
+        background-color: $color-white;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+        padding: 3rem;
+        width: 60%;
+        @include respond(tab-land) {
+            width: 85%;
+        }
+        @include respond(tab-port) {
+            width: 90%;
+            padding: 2rem;
+        }
+        @include respond(phone) {
+            padding: 1rem;
+        }
+
+        &-lg {
+            width: 70%;
+            @include respond(tab-land) {
+                width: 75%;
+            }
+            @include respond(tab-port) {
+                width: 80%;
+                padding: 2rem;
+            }
+        }
+    }
+
+    &-question-group {
+        margin-bottom: 3rem;
+        overflow: auto;
+        @include respond(phone) {
+            margin-bottom: 2rem;
+        }
+    }
+    &-flexbox {
+        display: flex;
+        &-justified{
+            justify-content: space-between;
+        }
+    }
+    &-basicinfo {
+        display: flex;
+        @include respond(phone) {
+            display: block;
+        } 
+    }
+
+    &-answer-group {
+        list-style: none;
+        @include clearfix;
+    }
+
+    &-answer {
+        text-align: center;
+        padding: 1rem;
+        background-color: $color-secondary-light;
+        border: 1px solid $color-light-grey-blue;
+        display: table;
+        margin-right: 2rem;
+
+        &:hover {
+            background-color: $color-secondary-dark;
+            transform: translateY(-.3rem);
+            box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+        }
+        &-text {
+            display: table-cell;
+            vertical-align: middle;
+            line-height: normal;
+        }
+        &-link {
+            float: left;
+            text-decoration: none;
+            color: $color-black;
+            &:hover {
+                text-decoration: none;
+                color: $color-black;
+            }
+        }
+    }
+    &-lg {
+        width: 12rem;
+        height: 6rem;
+    }
+    &-sm {
+        width: 8rem;
+        height: 4rem;
+    }
+    
+    &-button-group {
+        @include clearfix;
+        &-center {
+            @include clearfix;
+            text-align: center;
+        }
+    }
+    &-inputbox {
+        width: 8rem;
+        margin-top: 1rem;
+        @include respond(phone) {
+            width: 6rem;
+            font-size: .7rem;
+        }
+    }
+    &-header {
+        margin: 0 auto;
+        background-color: $color-white;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 3rem; 
+        width: 60%;
+        
+        @include respond(tab-land) {
+            width: 85%;
+        }
+        @include respond(tab-port) {
+            width: 90%;
+        }
+    }
+    &-label {
+        display: inline-block;
+    }
+    &-inline-form {
+        display: inline-block;
+        width: 50%;
+    }
+
+    &-contact-details {
+        &-group {
+            background-color: $color-light-grey;
+            padding: 1.5rem;
+
+            :not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+        &-element {
+        }
+    }
+    &-confirmacao {
+        text-align: center;
+    }
+    &-login {
+        width: 50% !important;
+        &-lg {
+            width: 90% !important;
+            padding: 1.5rem;
+        }
+    }
+    &_half-width {
+        width: 40%;
+        margin-right: 10%;
+        @include respond(phone) {
+            width: 100%;
+            float: none !important;
+        }
+    }
+    &_profile-pic {
+        height: 6rem;
+        width: 6rem;
+        max-width: 6rem;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        border: 1px solid $color-dark-grey;
+        border-radius: 1rem;
+        @include respond(phone) {
+            margin-right: .5rem;
+        }
+
+    }
+    &_large-profile-pic {
+        height: 10rem;
+        width: 10rem;
+        max-width: 10rem;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+        border: 1px solid $color-dark-grey;
+
+        @include respond(tab-land) {
+            margin-right: 1.5rem;
+            height: 8rem;
+            width: 8rem;
+        }
+        @include respond(tab-port) {
+            margin-right: 0;
+            margin-bottom: 0;
+            height: 6rem;
+            width: 6rem;
+        }
+        @include respond(phone) {
+            margin-top: 0;
+        }
+
+    }
+    &_large-profile-pic-editar {
+        margin-right: 1rem;
+    }
+
+
+    &_support-text {
+        font-size: .8rem;
+        margin-top: -1rem;
+        color: $color-primary-dark;
+        @include respond(phone) {
+            margin-top: -1rem;
+            line-height: 1.2;
+        }
+    }
+    &-termos {
+        margin-bottom: 1.5rem;
+        align-items: center;
+        display: table;
+        &-checkbox {
+            display: table-cell; 
+            font-size: 1rem;
+        }
+    }
+    &-perfil {
+        padding: 0rem;
+        &-header {
+            background-color: $color-primary-light;
+            padding-left: 2rem;
+            padding: 1rem 2rem;
+            &-text {
+                font-size: 1.5rem;
+                margin-bottom: 0;
+                color: $color-black;
+                @include respond(phone) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        &-body {
+            padding: 2rem;
+            @include respond(phone) {
+                padding: 1rem;
+            }
+        }
+        &-aprovado {
+            background-color: #008000bd;
+            text-align: center;
+            height: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid $color-black;
+            
+            &-img {
+                height: 1rem;
+                float: left;
+                margin-top: .2rem;
+            }
+            &-text {
+                float: right;
+                color: $color-white;
+                margin-left: .5rem;
+                font-size: .7rem;
+                font-weight: 500;
+                margin-top: .2rem;
+            }
+
+        }
+        &-id {
+            display: flex;
+            @include respond(tab-port) {
+                display: block;
+                text-align: center;
+            }
+            &-main {
+                margin-top: 1rem;
+            }
+            &-right {
+                margin-left: auto;
+                display: flex
+            }
+        }
+
+        &-localizacao {
+            display: flex;
+            margin-top: 1rem;
+            @include respond(tab-port) {
+                display: inline-block;
+                margin-top: 0;
+                margin-bottom: 1rem;
+            }
+            &-texto {
+                margin-left: .5rem;
+                font-size: 1.1rem;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+        } 
+
+        &-title {
+            margin-top: 2rem;
+            font-weight: 700;
+            @include respond(phone) {
+                margin-top: 1.5rem;
+                font-size: 1.25rem;
+            }
+        }
+
+        &-skills {
+            &-skillset-principal {
+                display: inline-block;
+                transform: skew(-20deg);
+                background: $color-secondary-light;
+                color: $color-primary-dark;
+                text-align: center;
+                border: 1px solid $color-primary-dark;
+            }
+            &-skillset-original {
+                margin: .5rem .75rem 0 0;
+                display: inline-block;
+                transform: skew(-20deg);
+                background: $color-primary-light;
+                color: $color-black;
+                text-align: center;
+            }
+            &-skillset-profile {
+                margin: .5rem .5rem 0 0;
+                display: inline-block;
+                background: $color-secondary-light;
+                color: $color-primary-dark;
+                text-align: center;
+                border: 1px solid $color-primary-dark;
+                border-radius: 5px;
+            }
+            &-tag-text {
+                transform: skew(20deg);
+                margin-bottom: 0;
+                padding: .25rem .5rem;
+                font-weight: 700;
+                font-size: .8rem;
+            }
+            &-profile-tag-text {
+                margin-bottom: 0;
+                padding: .25rem .5rem;
+                font-weight: 700;
+                font-size: .8rem;
+            }
+        }
+        &-descricao {
+            font-size: 1.1rem;
+            color: $color-dark-grey;
+            text-align: justify;
+            white-space: pre-line;
+            @include respond(phone) {
+                font-size: .9rem;
+                color: $color-darker-grey;
+            }
+        }
+        &-portfolio-text {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+        &-portfolio-list{
+            margin-left: 2rem;
+            margin-top: 1.2rem;
+            &-item{
+                margin: .5rem 0;
+                font-size: 1rem;
+            }
+        }
+        &-portfolio-title {
+            @include respond(phone) {
+                font-size: 1rem;
+            }
+        }
+        &-contratar {
+            margin-top: -1rem;
+            &-rate {
+                float: right;
+                font-size: 1.4rem;
+                margin-right: 1.5rem;
+                @include respond(phone) {
+                    font-size: 1rem;
+                    margin-right: 0;
+                }
+                &-value {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    @include respond(phone) {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+        &-trabalho{
+            &-id {
+                display: block;
+                margin-bottom: 1.5rem;  
+            }
+            &-titulo {
+                font-weight: bold;
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+            &-data {
+                margin-left: auto;
+                margin-right: 0;
+                font-size: 1.1rem;
+
+            }
+            &-categoria {
+                font-size: 1.25rem;
+                margin-bottom: 1.5rem;
+            }
+            &-icones {
+                &-row {
+                    margin-top: .5rem;
+                    & > div.col-sm {
+                        margin-bottom: .75rem;
+                    }
+                    & > div.col-sm-5 {
+                        margin-bottom: .75rem;
+                    }
+                }
+            }
+            &-detalhes {
+                display: flex;
+                &-texto {
+                    margin-left: .5rem;
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+            }
+            &-tempo {
+                margin-left: 6rem;
+            }
+        }
+        &-editar {
+            float: right;
+            font-size: 1rem;
+            letter-spacing: -1px;
+            cursor: pointer;
+            color: $color-primary-dark;
+            font-weight: 500;
+            padding: .15rem .6rem;
+            background-color: $color-secondary-dark;
+            border: 1px solid $color-dark-grey;
+            border-radius: 5px;
+            margin-top: .2rem;
+            &:hover {
+                background-color: $color-primary-dark;
+                color: $color-white;
+            }
+            @include respond(phone) {
+                font-size: .7rem;
+            }
+        }
+        &-group {
+            margin-bottom: 3rem;
+        }
+        &-portfolio-group {
+            padding: 1rem 1.5rem;
+            background-color: #eeeeee80;
+            margin: 2rem 1rem;
+            @include respond(phone) {
+                padding: .5rem 1rem;
+                margin: 1rem auto;
+            }
+        }
+        &-experiencia {
+            &-group {
+                padding: 1rem 1.5rem;
+                background-color: #eeeeee80;
+                margin: 2rem 1rem;
+                @include respond(phone) {
+                    padding: .5rem 1rem;
+                    margin: 1rem auto;
+                }
+            }
+            &-header {
+                display: flex;
+                justify-content: space-between;
+            }
+            &-empresa {
+                font-size: 1.25rem;
+                color: $color-primary-dark;
+                margin-bottom: 0;
+                @include respond(phone) {
+                    font-size: 1rem;
+                }
+            }
+            &-posicao {
+                font-size: 1.25rem;
+                font-weight: 500;
+                margin-bottom: .5rem;
+                @include respond(phone) {
+                    font-size: .8rem;
+                    font-weight: 700;
+                }
+            }
+            &-data {
+                font-size: 1rem;
+                color: $color-darker-grey;
+                margin-bottom: .5rem;
+                @include respond(phone) {
+                    font-size: .8rem;
+                }
+            }
+            &-descricao_exp {
+                font-size: 1rem;
+                color: $color-dark-grey;
+                margin-left: 1.5rem;
+            }
+        }
+        &-educacao {
+            &-group {
+                padding: 1rem 1.5rem;
+                background-color: #eeeeee80;
+                margin: 2rem 1rem;
+                @include respond(phone) {
+                    padding: .5rem 1rem;
+                    margin: 1rem auto;
+                }
+            }
+            &-curso {
+                font-size: 1.25rem;
+                margin-bottom: 0;
+                color: $color-primary-dark;
+                @include respond(phone) {
+                    font-size: 1rem;
+                }
+            }
+            &-instituto {
+                font-size: 1.25rem;
+                color: $color-dark-grey;
+                margin-bottom: 0;
+                @include respond(phone) {
+                    font-size: 1rem;
+                }
+            }
+        }
+        &-link {
+            font-size: 1rem;
+            margin-left: 1.5rem;
+        }
+        &-support-text {
+            font-size: 1rem;
+            color: $color-dark-grey;
+            @include respond(phone) {
+                font-size: .6rem; 
+            }
+        }
+    }
+    &-email-width {
+        width: 50%;
+        @include respond(phone) {
+            width: 70%;
+        }
+    }
+    &-divider {
+        margin: 3rem 0;
+        @include respond(phone) {
+            margin: 1.5rem 0;
+        }
+    }
+}
+
+.radio-answer-box {
+    display: flex;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    
+    &-label {
+        position: relative;
+        cursor: pointer;
+        margin-right: 2rem;
+        @include respond(tab-port) {
+            margin-right: 1rem;
+        }
+    }
+    &-input {
+        display: none;
+        &:checked ~ span {
+            background: $color-secondary-dark;
+            border: 1px solid #008eff;
+            font-weight: 700;
+        }
+    }
+    &-span {
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: 300;
+        font-size: 1rem;
+        position: relative;
+        margin-right: 2rem;
+        background: $color-secondary-light;
+        border: 1px solid $color-light-grey-blue;
+        color:$color-black;
+        letter-spacing: -1px;
+
+        @include respond(tab-port) {
+            font-size: .8rem;
+            line-height: 1.2;
+        }
+
+
+        &:hover {
+            background: $color-secondary-dark;
+        }
+    }
+    &-span-lg {
+        width: 10rem;
+        height: 6rem;
+        @include respond(tab-port) {
+            width: 8rem;
+        }
+    }
+    &-span-sm {
+        width: 8rem;
+        height: 4rem;
+        @include respond(phone) {
+            width: 6rem;
+            height: 3rem;
+        }
+    }
+    &-radio {
+        font-size: 1.1rem;
+        margin-left: 1rem;
+        list-style: none;
+        @include respond(phone) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.legal-box {
+    background-color: $color-white;
+    padding: 2rem 3rem;
+    border: 2px solid $color-light-grey-blue;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}

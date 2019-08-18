@@ -1,0 +1,31 @@
+.verified-img {
+    height:1.2rem;
+    vertical-align: top;
+}
+
+.table-skills {
+    margin-bottom: 1rem;
+    width: 85%;
+    &-input {
+        display: block;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        text-align: center;
+    }
+    
+    &-remove-span {
+        vertical-align: middle !important;
+        font-size: 1.4rem;
+    }
+}
+
+.price-input {
+    text-align: center;
+}
+
+.settings-img {
+    height: 1.3rem;
+    margin-top: .2rem;
+    margin-right: 1rem;
+}

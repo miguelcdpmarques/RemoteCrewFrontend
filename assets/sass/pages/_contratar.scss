@@ -1,0 +1,88 @@
+.client-signup {
+    &-header {
+        position: relative;
+    }
+}
+
+.section-client-signup-form {
+    margin-top: $navbar-margin-top;
+    padding-top: 3rem;
+    overflow: auto;
+    background-image: linear-gradient(rgba(4, 62, 114, 0.1), rgba(4, 62, 114, 0.1)), url(~assets/images/login/textured_paper.png);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin-top: 0 !important;
+}
+
+
+
+.animation-entry {
+    animation: moveInLeft .3s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation-exit {
+    animation: moveOutLeft .3s ease-out;
+}
+
+.main-text-area {
+    height: 14rem !important;
+    font-size: .9rem;
+    @include respond(phone) {
+        height: 8rem !important;
+        font-size: .7rem;
+    }
+}
+
+.main-invalid-feedback {
+    display: block;
+    margin-top: .25rem;
+    color: red;
+    font-size: .9rem;
+    @include respond(phone) {
+        font-size: .6rem;
+    }
+}
+
+.input_contacto_metodo {
+    margin: 0 1rem !important;
+    font-size: 1.25rem;
+    display: inline-block;
+    width: 15%;
+    @include respond(phone) {
+        margin: 0 0 !important;
+        width: 5rem;
+    }
+}
+
+.input_contacto_detalhe {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: $color-primary-dark;
+    width: 25%;
+    margin: 0;  
+    @include respond(phone) {
+        width: 8rem;
+    }
+}
+
+.heading_confirmacao {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    @include respond(phone) {
+        font-size: 1.75rem;
+        margin-top: 1rem;
+    }
+}
+
+.tick_confirmacao {
+    height: 2.5rem; 
+    margin: 2rem 0;
+}
+
+#editar {
+    text-decoration: underline;
+    cursor: pointer;
+}

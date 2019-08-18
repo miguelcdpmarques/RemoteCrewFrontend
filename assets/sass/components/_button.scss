@@ -1,0 +1,388 @@
+.btn {
+    &-navbar {
+        color: $color-black;
+        font-size: 1.3rem; 
+        margin-top: 1.5rem;
+        background-color: $color-secondary-dark;
+        border: solid 2px $color-secondary-dark;
+        margin-right: 2rem;
+
+        @include respond(tab-land) {
+            margin-top: calc(#{$navbar-margin-top-small});
+            margin-right: .8rem;
+        }
+        @include respond(tab-port) {
+            font-size: 1rem; 
+            margin-top: calc(#{$navbar-margin-top-small} - .1rem);
+            margin-right: .8rem;
+        }
+    
+        &:hover {
+            color: $color-white;
+            border-color: $color-secondary-dark;
+            background-color: $color-secondary-dark;
+        }
+    
+        &:active {
+            border-color: $color-secondary-dark !important;
+            background-color: $color-secondary-dark !important;
+        }
+    }
+
+    &-main-heading {
+        margin: 1.5rem;
+        font-size: 1.4rem; 
+        animation: moveInBottom 1s ease-out .75s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .5);
+        text-align: center;
+
+        @include respond(tab-port) {
+            font-size: 1.1rem; 
+            margin: 1rem .5rem;
+        }
+
+        @include respond(phone) {
+            font-size: .8rem; 
+            width: 12rem;
+            margin-top: .5rem;
+        }
+
+        &-no-animation {
+            animation: none;
+            opacity: 1;
+        }
+
+        &-hire {
+            color: $color-black;
+            background-color: $color-secondary-dark;
+            &:hover {
+                color: $color-black;
+                background-color: $color-secondary-light;
+                transform: translateY(-.1rem);
+                box-shadow: 0 1rem 2rem rgba($color-black, .5);
+            }
+        }
+
+        &-apply {
+            color: $color-secondary-dark;
+            border: solid 2px $color-secondary-dark;
+            background-color: transparent;
+            &:hover {
+                color: $color-white;
+                border-color: $color-secondary-dark;
+                background-color: $color-secondary-dark;
+                transform: translateY(-.1rem);
+                box-shadow: 0 1rem 2rem rgba($color-black, .5);
+            }
+        }
+     
+        &:active {
+            transform: translateY(0); 
+            box-shadow: 0 0.5rem 1rem rgba($color-black, .5);
+        }
+    }
+
+    &-saber-mais {
+        font-size: 1.3rem; 
+        color: $color-primary-dark;
+        border: solid 2px $color-primary-dark;
+        opacity: 1;
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .5);
+        @include respond(phone) {
+            font-size: 1rem;
+        }
+        &:hover {
+            color: $color-white;
+            border-color: $color-primary-dark;
+            background-color: $color-primary-dark;
+            transform: translateY(-.1rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, .5);
+        }
+
+        &:active {
+            transform: translateY(0); 
+            box-shadow: 0 0.5rem 1rem rgba($color-black, .5);
+        }
+    }
+
+    &-secondary {
+        float: right;
+        color: $color-black;
+        font-size: 1.3rem; 
+        background-color: $color-secondary-dark;
+        border: solid 2px $color-secondary-dark;
+        margin-right: 2rem;
+        margin-top: -1rem;
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .5);
+
+        @include respond(tab-land) {
+            margin: 0 auto;
+            float: none;
+            display: table;
+            margin-bottom: 3rem;
+        }
+        &:hover {
+            color: $color-white;
+            border-color: $color-secondary-dark;
+            background-color: $color-secondary-dark;
+            transform: translateY(-.1rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, .5);
+        }
+    
+        &:active {
+            transform: translateY(0); 
+            box-shadow: 0 0.5rem 1rem rgba($color-black, .5);
+        }
+    }
+
+    &-comecar{
+        transform: translateY(-3rem);
+        @include respond(tab-port) {
+            transform: translateY(0)
+        }
+    }
+    &-jumpstart {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-secondary-dark;
+        font-size: 1.2rem; 
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .5);
+
+        &:hover {
+            background-color: $color-secondary-light;
+            box-shadow: 0 .75rem 1.5rem rgba($color-black, .5);
+        }
+        @include respond(tab-port) {
+            bottom: 20%;
+        }
+        @include respond(phone) {
+            font-size: 1rem;
+        }
+    }
+
+    &-freelancers-heading {
+        float: none;
+    }
+    &-dropdown {
+        color: $color-black;
+        font-size: 1.1rem; 
+        background-color: $color-secondary-light;
+        border: solid 1px $color-light-grey-blue;
+        font-weight: 300; 
+        height: 2.5rem;
+        @include respond(phone) {
+            height: 2rem;
+        }
+        &:hover {
+            background-color: $color-secondary-dark;
+        }
+
+    }
+
+    &-progredir {
+        float: right;
+        font-size: 1.3rem; 
+        color: $color-white;
+        background-color: $color-primary-dark;
+
+        @include respond(phone) {
+            font-size: 1rem;
+        }
+        &:hover {
+            color: $color-white;
+            border-color: $color-primary-dark;
+            background-color: $color-primary-dark;
+            transform: translateY(-.1rem);
+        }
+
+        &:active {
+            transform: translateY(0); 
+        }
+    }
+    &-guardar {
+        font-size: .8rem; 
+        color: $color-white;
+        background-color: $color-primary-dark;
+        margin-top: .75rem;
+        
+        @include respond(phone) {
+            font-size: .5rem;
+        }
+        &:hover {
+            color: $color-white;
+            border-color: $color-primary-dark;
+            background-color: $color-primary-dark;
+            transform: translateY(-.1rem);
+        }
+
+        &:active {
+            transform: translateY(0); 
+        }
+    }
+
+    &-anterior {
+        float: left;
+        font-size: 1.3rem; 
+        color: $color-primary-dark;
+        background-color: $color-white;
+        border: 1px solid $color-primary-dark;
+
+        @include respond(phone) {
+            font-size: 1rem;
+        }
+        &:hover {
+            transform: translateY(-.1rem);
+        }
+
+        &:active {
+            transform: translateY(0); 
+        }
+    }
+    &-confirmar {
+        font-size: 1.3rem; 
+        color: $color-white;
+        background-color: $color-primary-dark;
+
+        &:hover {
+            color: $color-white;
+            border-color: $color-primary-dark;
+            background-color: $color-primary-dark;
+            transform: translateY(-.1rem);
+        }
+
+        &:active {
+            transform: translateY(0); 
+        }
+    }
+
+    &-login {
+        color: $color-black;
+        width: 100%;
+        font-size: 1.1rem; 
+        text-transform: uppercase;
+        background-color: $color-secondary-dark;
+        border: solid 2px $color-secondary-dark;
+        margin-top: 1rem;
+    }
+
+    &-adicionar_links {
+        display: block;
+        border-radius: 1rem;
+        margin-top: .8rem;
+        padding: .2rem .5rem;
+        background-color: $color-white;
+        color: $color-primary-dark;
+        border: 1px solid $color-primary-dark;
+        font-size: .8rem;
+        &:hover {
+            color: $color-white;
+            background-color: $color-primary-dark;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &-adicionar_skills {
+        display: block;
+        border-radius: 1rem;
+        font-size: .7rem;
+        padding: .2rem .5rem;
+        background-color: $color-white;
+        color: $color-primary-dark;
+        border: 1px solid $color-primary-dark;
+        cursor: pointer;
+        &:hover {
+            color: $color-white;
+            background-color: $color-primary-dark;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &-remover_skills {
+        background-color: transparent;
+        border: none;
+        color: red;
+        cursor: pointer;
+        &:hover {
+            font-weight: 700;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &-adicionar_section {
+        text-decoration: none;
+        width: fit-content;
+        font-size: 1rem;
+        text-align: center;    
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &-contratar {
+        color: $color-black;
+        font-size: 1.3rem; 
+        text-transform: uppercase;
+        background-color: $color-secondary-dark;
+        border: solid 2px $color-secondary-dark;
+        margin-bottom: 1.5rem;
+        margin-left: 1.5rem;
+        &:hover {
+            color: $color-white;
+            border-color: $color-secondary-dark;
+            background-color: $color-secondary-dark;
+        }
+    }
+    &-eliminar {
+        border: none;
+        background-color: transparent;
+        color: red;
+        cursor: pointer;
+    }
+    &-contactar {
+        color: $color-black;
+        font-size: 1.1rem; 
+        text-transform: uppercase;
+        background-color: $color-secondary-dark;
+        border: solid 2px $color-secondary-dark;
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        @include respond(phone) {
+            font-size: .8rem;
+            padding: .25rem .75rem;
+        }
+        &:hover {
+            color: $color-white;
+            border-color: $color-secondary-dark;
+            background-color: $color-secondary-dark;
+        }
+    }
+    &-alterar-passe {
+        float: left;
+        font-size: 1rem; 
+        color: $color-primary-dark;
+        background-color: $color-white;
+        border: 1px solid $color-primary-dark;
+
+        @include respond(phone) {
+            font-size: 1rem;
+        }
+        &:hover {
+            transform: translateY(-.1rem);
+            color: $color-white;
+            background-color: $color-primary-dark;
+        }
+
+        &:active {
+            transform: translateY(0); 
+        }
+    }
+}
+
+

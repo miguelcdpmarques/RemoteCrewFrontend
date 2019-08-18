@@ -1,0 +1,113 @@
+.freelancers {
+    &-header {
+        background-image: linear-gradient(rgba(4, 62, 114, 0.75), rgba(4, 62, 114, 0.75)), url(../images/contractors/outside_coding.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100vh;
+        background-attachment: fixed;
+        position: relative;
+        @include respond(tab-port) {
+            background-attachment: scroll;
+            height: 90vh;
+        }
+        @include respond(phone) {
+            height: 80vh;
+        }
+    }
+    
+    &-heading-group {
+        position: absolute;
+        text-align: center;
+        @include align-absolute-center;
+        top: 70%;
+        width: 90%; 
+
+        @include respond(bigdesktop) {
+            top: 24rem;
+        }
+
+        @include respond(tab-land) {
+            position: relative;
+            text-align: center;
+            @include align-absolute-center;
+            top: 70%;
+            width: 80%; 
+        }
+    }
+}
+
+.main-heading-empresa {
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    @include respond(phone) {
+        top: 85%;
+    }
+}
+
+.programming-languages {
+    margin: 3rem 0 0 0;
+    text-align: center;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    &-img {
+        @include respond(phone) {
+            width: 70%;
+        }
+    }
+}
+
+.section-freelancers {
+    padding: 4rem 0;
+}
+
+.section-esperado {
+    &-freelancers {
+        background-color: rgba($color-secondary-light, 0.3);
+        padding: 3rem;
+    }
+    &-remotecrew {
+        background-color: rgba($color-primary-light, 0.3);
+        padding: 3rem;
+    }
+}
+
+
+.section-remote-work {
+    margin: 6rem 0 0 0;
+    @include respond(phone) {
+        margin: 3rem 0 0 0;
+    }
+}
+
+.card-deck {
+    justify-content: space-between;
+    @include respond(phone) {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.card-deck .card {
+    margin: 0 .5rem 3rem;
+    @include respond(tab-port) {
+        -ms-flex: 0 0 47.5%;
+        flex: 0 0 47.5%;
+    }
+}
+
+
+.section-processo-candidatura {
+    overflow: auto;
+    padding-bottom: 4rem;
+    @include respond(phone) {
+        margin-top: 3rem;
+        padding-bottom: 2rem;
+    }
+}
+
