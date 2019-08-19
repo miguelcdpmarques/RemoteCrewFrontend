@@ -46,6 +46,10 @@ export default {
                 password: this.password
             }
             this.$store.dispatch('auth/loginUser', authData)
+            .then(response => {
+                console.log("Post made successfully", response)
+            })
+            .catch(error => console.log(error))
         }
     }
 }
