@@ -4,7 +4,7 @@ export const state = () => ({
     infoMessages: [],
     userIsAuthenticated: false,
     role: 'admin',
-    token: ''
+    token: null,
 })
 
 export const mutations = {
@@ -46,5 +46,11 @@ export const actions = {
                 context.commit('setInfoMessage', error.response.data.message)
                 setTimeout(() => context.commit('clearInfoMessages'), 3000)
             })
+    }
+}
+
+export const getters = {
+    isAuthenticated(state) {
+        return state.token != null
     }
 }

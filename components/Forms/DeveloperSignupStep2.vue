@@ -1,27 +1,27 @@
 <template>
   <div id="freelancerSignup-step2" class="signup-box-client signup-box-client-lg" :class="{hidden: isHidden}">
     <div class="signup-box-question-group">
-        <h4 class="signup-question">
-          <label class="signup_formlabel" for="categoria">What's the main category of work you provide as a contractor?</label>
-          <span class="obrigatorio-symbol">*</span>
-        </h4>
-        <select class="btn btn-dropdown" id="categoria" name="categoria">
-          <option value="">Select</option>
-          <option value="Web Development">Web Development</option>
-          <option value="Frontend Development">Frontend Development</option>
-          <option value="Backend Development">Backend Development</option>
-          <option value="E-commerce Development">E-commerce Development</option>
-          <option value="Desktop Apps Development">Desktop Apps Development</option>
-          <option value="Mobile Development">Mobile Development</option>
-          <option value="Game Development">Game Development</option>
-          <option value="API Development">API Development</option>
-          <option value="Data Science">Data Science</option>
-          <option value="DevOps">DevOps</option>
-          <option value="Other">Other</option>
-          </select>
-        <div id="invalid-categoria" class="main-invalid-feedback hidden">
-            Please select a category.
-        </div>
+      <h4 class="signup-question">
+        <label class="signup_formlabel" for="category">What's the main category of work you provide as a contractor?</label>
+        <span class="obrigatorio-symbol">*</span>
+      </h4>
+      <select v-model="formFields.category" class="btn btn-dropdown" id="category" name="category">
+        <option value="">Select</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Frontend Development">Frontend Development</option>
+        <option value="Backend Development">Backend Development</option>
+        <option value="E-commerce Development">E-commerce Development</option>
+        <option value="Desktop Apps Development">Desktop Apps Development</option>
+        <option value="Mobile Development">Mobile Development</option>
+        <option value="Game Development">Game Development</option>
+        <option value="API Development">API Development</option>
+        <option value="Data Science">Data Science</option>
+        <option value="DevOps">DevOps</option>
+        <option value="Other">Other</option>
+        </select>
+      <div ref="invalid-category" id="invalid-category" class="main-invalid-feedback hidden">
+          Please select a category.
+      </div>
     </div>
     <div class="signup-box-question-group">
         <h4 class="signup-question">
@@ -29,8 +29,8 @@
           <span class="obrigatorio-symbol">*</span>
         </h4>
         <p class="signup-box_support-text">Enter up to 6 skills separated by commas. They should represent the stack in which you have the most experience as a professional. Example: JavaScript, PHP, Laravel, MySQL. </p>
-        <input type="text" name="" value="This has to be reviewed for tags input">
-        <div id="invalid-skills_principais" class="main-invalid-feedback hidden">
+        <input v-model="formFields.skills" type="text" name="" value="This has to be reviewed for tags input">
+        <div ref="invalid-skills_principais" id="invalid-skills_principais" class="main-invalid-feedback hidden">
             Please enter your skills.
         </div>
     </div>
@@ -56,33 +56,70 @@
     </div>
     <div class="signup-box-question-group">
         <h4 class="signup-question">
-          
+          <label class="signup_formlabel" for="availability">What is your availability to work in new projects?</label>
           <span class="obrigatorio-symbol">*</span>
         </h4>
-        <div class="radio-answer-box">   
-          <label class="radio-answer-box-label">
-              <input class="radio-answer-box-input" id="disponibilidade" name="disponibilidade" type="radio" value="Test1"> 
-              <span class="radio-answer-box-span radio-answer-box-span-sm">Test1</span>
-          </label>
-          <label class="radio-answer-box-label">
-              <input class="radio-answer-box-input" id="disponibilidade" name="disponibilidade" type="radio" value="Test2"> 
-              <span class="radio-answer-box-span radio-answer-box-span-sm">Test2</span>
-          </label>  
-        </div>
-        <div id="invalid-disponibilidade" class="main-invalid-feedback hidden">
+        <RadioForm 
+          @change="formFields.availability = $event" 
+          :question="'availability'" 
+          :options="['Part-time', 'Full-time']"></RadioForm>
+        <div ref="invalid-availability" id="invalid-availability" class="main-invalid-feedback hidden">
             Please choose an option.
         </div>
     </div>
+    <span class="obrigatorio-text">Fields marked with * are required.</span>
     <div class="signup-box-button-group">
-        <button type="button" id="btnanterior2" class="btn btn-anterior">Previous</button>
-        <button type="button" id="btncontinuar2" class="btn btn-progredir">Proceed</button>
+        <button @click="onPrevious" type="button" id="btnanterior2" class="btn btn-anterior">Previous</button>
+        <button @click="onProceed" type="button" id="btncontinuar2" class="btn btn-progredir">Proceed</button>
     </div>
   </div>
 </template>
                 
 <script>
+import RadioForm from '~/components/Forms/RadioForm'
+
 export default {
-  props: ['isHidden']
+  props: ['isHidden'],
+  data() {
+    return {
+      formFields: {
+        category: '',   
+        skills: '',
+        availability: ''
+      },
+      fieldValidation: {
+        category: 'invalid-category',   
+        skills: 'invalid-skills_principais',
+        availability: 'invalid-availability'
+      }
+    }
+  },
+  methods: {
+    onPrevious() {
+      this.$emit('previousFormStep', 'step2') 
+    },
+    onProceed() {
+      if(this.validateFields()) {
+        this.$emit('nextFormStep', 'step2')           
+      }
+    },
+    validateFields() {
+      let validForm = true
+      for(let key in this.formFields){
+        let fieldValidationElement = this.$refs[this.fieldValidation[key]]
+        if(this.formFields[key] == '') {
+            validForm = false
+            fieldValidationElement.className = 'main-invalid-feedback'
+        } else {
+            fieldValidationElement.className = 'main-invalid-feedback hidden'
+        }           
+      }
+      return validForm       
+    }
+  },
+  components: {
+    RadioForm
+  }
 }
 </script>
                         

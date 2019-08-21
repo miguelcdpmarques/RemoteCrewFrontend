@@ -4,7 +4,6 @@
         :class="{hidden:isHidden}">
         <div class="media">                
             <img id="foto_perfil_imagem" src="~assets/images/profile_pics/default.jpg" alt="" class="signup-box_profile-pic">
-
             <div class="signup-box-question-group">
                 <label class="form-label signup_formlabel" for="foto_perfil">Profile Photo</label>
                 <input accept="image/*" class="form-control-file form-file-text mt-3 mb-3" id="foto_perfil" name="foto_perfil" type="file">
@@ -15,8 +14,8 @@
             <div class="signup-box-question-group signup-box_half-width">
                 <label class="form-label signup_formlabel" for="nome_completo">Full Name</label>
                 <span class="obrigatorio-symbol">*</span>
-                <input class="form-control support-email-input" id="nome_completo" name="nome_completo" type="text" value="">
-                <div id="invalid-nome_completo" class="main-invalid-feedback hidden">
+                <input v-model="formFields.name" class="form-control support-email-input" id="nome_completo" name="nome_completo" type="text" value="">
+                <div ref="invalid-nome_completo" id="invalid-nome_completo" class="main-invalid-feedback hidden">
                     Please write your name.
                 </div>
             </div>
@@ -38,10 +37,11 @@
                 </div>
             </div>
             <div class="signup-box-question-group signup-box_half-width float-right">
-                <label class="form-label signup_formlabel" for="distrito">Location</label>
+                <label class="form-label signup_formlabel" for="distrito">Country</label>
                 <span class="obrigatorio-symbol">*</span>
-                <select class="form-control" id="distrito" name="distrito">
+                <select v-model="formFields.country" class="form-control" id="distrito" name="distrito">
                     <option value="" disabled="true">Select</option>
+                    <option value="International">Country List goes here</option>
                     <option value="International">International</option>
                     <option value="--------" disabled="true">--------</option>
                     <option value="Lisboa">Lisboa</option>
@@ -65,21 +65,53 @@
                     <option value="Madeira">Madeira</option>
                     <option value="Açores">Açores</option>
                     </select>
-                <div id="invalid-distrito" class="main-invalid-feedback hidden">
-                    Please select a location.
+                <div ref="invalid-distrito" id="invalid-distrito" class="main-invalid-feedback hidden">
+                    Please select a country.
                 </div>
             </div>
         </div>
-        <div class="signup-box-button-group mt-2 mb-2">
-            <button type="button" id="btncontinuar1" class="btn btn-progredir">Proceed</button>
-        </div>
         <span class="obrigatorio-text">Fields marked with * are required.</span>
+        <div class="signup-box-button-group mt-2 mb-2">
+            <button @click="onProceed" type="button" id="btncontinuar1" class="btn btn-progredir">Proceed</button>
+        </div>   
     </div>
 </template>
                 
 <script>
 export default {
-    props: ['isHidden']
+    props: ['isHidden'],
+    data() {
+        return {
+            formFields: {
+                name: '',   
+                country: ''
+            },
+            fieldValidation: {
+                name: 'invalid-nome_completo',
+                country: 'invalid-distrito'
+            }
+        }
+    },
+    methods: {
+        onProceed() {
+            if(this.validateFields()) {
+                this.$emit('nextFormStep', 'step1')           
+            }
+        },
+        validateFields() {
+            let validForm = true
+            for(let key in this.formFields){
+                let fieldValidationElement = this.$refs[this.fieldValidation[key]]
+                if(this.formFields[key] == '') {
+                    validForm = false
+                    fieldValidationElement.className = 'main-invalid-feedback'
+                } else {
+                    fieldValidationElement.className = 'main-invalid-feedback hidden'
+                }           
+            }
+            return validForm       
+        }
+    }
 }
 </script>
                         
